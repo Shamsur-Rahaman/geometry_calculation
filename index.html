@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <title>Geometry genius</title>
+</head>
+<body>
+    
+    <main class="grid grid-cols-4 gap-4">
+        
+        <section class="col-span-3 gap-4 mt-5 mx-auto">
+            <!-- Card 1 Rectengle start-->
+            <div class="grid grid-cols-3 gap-4">
+
+            
+                <div class="">                
+                    <div class="card bg-base-100 shadow-xl">
+                        <figure><img src="images/rectangle.png" alt="Shoes" /></figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Rectangle Area : <span id="valueOfRectangleArea"></span>cm<sup>2</sup></h2>
+                            <p>Area = H X W</p>
+                            <div class="grid grid-cols-2 gap-2">
+                                <input type="number" name="" id="rectangle_height" placeholder="Height" class="w-full  text-center"> 
+                                <input type="number" name="" id="rectangle_width" placeholder="Width" class="w-full  text-center">
+                            </div>
+                            
+                            <div class="card-actions justify-end">
+                            <button class="btn btn-primary" id="btn_rectangle" onclick="calculateRectangleArea()">Calculate</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 1 Rectengle end-->
+
+                <!-- Card 2 Triangle start-->
+                <div class="">                
+                    <div class="card bg-base-100 shadow-xl">
+                        <figure><img src="images/triangle.png" alt="Shoes" /></figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Triangle Area : <span id="valueOfTriangleArea"></span>cm<sup>2</sup></h2>
+                            <p>Area = 1/2 X B X H</p>
+                            <div class="grid grid-cols-2 gap-2">
+                                <input type="number" name="" id="triangle_base" placeholder="Base" class="w-full  text-center"> 
+                                <input type="number" name="" id="triangle_height" placeholder="Height" class="w-full text-center">
+                            </div>
+                            
+                            <div class="card-actions justify-end">
+                            <button class="btn btn-primary" onclick="calculateTriangleArea()">Calculate</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 Triangle end-->
+
+                <!-- Card 3 Parallelogram start-->
+                <div class="">                
+                    <div class="card bg-base-100 shadow-xl">
+                        <figure><img src="images/parallelogram.png" alt="Shoes" /></figure>
+                        <div class="card-body">
+                            <h2 class="card-title" id="shape">Parallelogram</h2>
+                                
+                            <p>Area : <span id="valueOfParallelogramArea"></span>cm<sup>2</sup></p>
+                            <p>Area = B X H</p>
+                            <div class="grid grid-cols-2 gap-2">
+                                <input type="number" name="" id="parallelogram_base" placeholder="Base" class="w-full text-center"> 
+                                <input type="number" name="" id="parallelogram_height" placeholder="Height" class="w-full  text-center">
+                            </div>
+                            
+                            <div class="card-actions justify-end">
+                            <button class="btn btn-primary" onclick="calculateParallelogramArea()">Calculate</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 Parallelogram end-->
+
+                <!--Card 4 Ellipse start-->
+                <div class="">                
+                    <div class="card bg-base-100 shadow-xl">
+                        <figure><img src="images/ellipse.png" alt="Shoes" /></figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Ellipse Area : <span></span>cm<sup>2</sup></h2>
+                            <p>Area = Pi X A X B</p>
+                            <div class="grid grid-cols-2 gap-2">
+                                <input type="number" name="" id="" placeholder="Semi-major" class="w-full text-center"> 
+                                <input type="number" name="" id="" placeholder="Semi-minor" class="w-full text-center">
+                            </div>
+                            
+                            <div class="card-actions justify-end">
+                            <button class="btn btn-primary">Calculate</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+            <!--Card 4 Ellipse end-->
+
+        </section>
+        <section class="col-span-1 p-5 m-5 bg-rose-200">
+            <h1 class="text-2xl">Area Calculator :</h1>
+            <div id="calculation_entry">
+
+            </div>
+
+        </section>
+    </main>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/rectengle.js"></script>
+    <script src="js/triangle.js"></script>
+    <script src="js/parallelogram.js"></script>
+</body>
+</html>
